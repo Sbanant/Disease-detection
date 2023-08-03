@@ -17,3 +17,6 @@ library, according to this an output will be provided along with a confidence sc
 
 All the databases attached here are picked up from websites online and haven't been formed personally by me.
 
+Also for disease detection via symptoms the database attached needs to be downloaded and then the path and column headings for the same replaced in the code
+as mentioned in the code.
+
