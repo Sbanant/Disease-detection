@@ -13,7 +13,7 @@ This part of the project will take input in the form of images through a camera,
 front of it, this process will take 5 seconds which can be changed in the code. The trained model will then process the captured image using the TensorFlow 
 library, according to this an output will be provided along with a confidence score telling which skin disease the user has. 
 
-# NOTE
+# Note
 
 All the databases attached here are picked up from websites online and haven't been formed personally by me.
 
