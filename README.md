@@ -14,15 +14,15 @@ front of it, this process will take 5 seconds which can be changed in the code. 
 library, according to this an output will be provided along with a confidence score telling which skin disease the user has. 
 
 # Optimizing Skin Disease Prediction Model - Achieving Higher Accuracy
-# Introduction 
+Introduction 
 This section outlines the various methodologies employed to enhance the accuracy of the skin disease prediction model, which utilizes a Multinomial Naive Bayes algorithm. The model identifies and classifies skin conditions such as Acne and Rosacea, Eczema, Cellulitis, Melanoma, and others, based on user-uploaded images.
 
-# Feature Engineering
+Feature Engineering
 One of the critical aspects of improving accuracy was extensive feature engineering. Since skin diseases present with diverse patterns, textures, and colors, effective image preprocessing was crucial:
 
-# Image Scaling and Normalization: Images were resized to 224x224 pixels for consistent input to the model. Additionally, each pixel value was normalized to the range [0,1] to reduce the variance between images.
+Image Scaling and Normalization: Images were resized to 224x224 pixels for consistent input to the model. Additionally, each pixel value was normalized to the range [0,1] to reduce the variance between images.
 
-# Data Augmentation: The dataset was augmented to increase variability and prevent overfitting. Techniques such as:
+Data Augmentation: The dataset was augmented to increase variability and prevent overfitting. Techniques such as:
 
 Rotation,
 Zooming,
@@ -46,7 +46,7 @@ To evaluate the model’s performance, precision, recall, and F1-scores were cal
 
 
 Conclusion
-Through advanced image preprocessing, data augmentation, model tuning, and multimodal feature representation, we were able to significantly improve the accuracy of the model. The combination of these techniques allowed the classifier to excel in both common and rare skin conditions. Future improvements may involve leveraging more advanced deep learning models and exploring fine-grained disease subtypes.
+Through advanced image preprocessing, data augmentation, model tuning, and multimodal feature representation, we were able to significantly improve the accuracy of the model. The combination of these techniques allowed the classifier to excel in both common and rare skin conditions. Future improvements may involve leveraging more advanced deep-learning models and exploring fine-grained disease subtypes.
 
 
 
