@@ -1,0 +1,8 @@
+0 Acne and rosacea 
+1 Cellulitis impetigo
+2 Eczema 
+3 Hair loss 
+4 herpes 
+5 Light disease
+6 Melanoma
+7 systematic disease
