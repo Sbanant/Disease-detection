@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom based Disease Detection</title>
+    <style>
+        *{
+          font-family: 'Roboto', sans-serif
+        }
+        body {
+            /* Set background image */
+            background-image: url('https://cdn.discordapp.com/attachments/852480765014704168/1147383639634612295/website_background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+
+        .login {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 36px; /* Adjust the heading font size */
+        }
+
+        form {
+            margin-top: 20px; /* Add space between the heading and the form */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            max-width: 400px; /* Adjust the input width as needed */
+            padding: 10px;
+            margin-bottom: 20px; /* Add space between the input and button */
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+
+        button.submit {
+            background-color: white; /* Set the background color to white */
+            color: #007bff; /* Set the button text color to blue */
+            padding: 10px 20px; /* Add padding to the button */
+            border: 2px solid #007bff;
+            cursor: pointer;
+            font-size: 18px; /* Adjust the font size as needed */
+            border-radius: 20px; /* Add rounded edges */
+            transition: background-color 0.3s ease; /* Add hover animation */
+        }
+
+        button.submit:hover {
+            background-color: #007bff; /* Change background color to blue on hover */
+            color: white; /* Change text color to white on hover */
+        }
+
+        h4 {
+            color: rgb(0, 0, 0);
+            font-size: 24px; /* Adjust the result text font size */
+            margin-top: 20px; /* Add space between the form and result text */
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000; /* Navbar background color */
+            padding: 10px 0; /* Add padding to the navbar (top and bottom) */
+            width: 100%; /* Stretch the entire horizontal length of the page */
+            position: fixed; /* Fixed position at the top of the page */
+            top: 0; /* Align to the top of the page */
+        }
+
+        .navbar a {
+            color: #fff; /* Navbar link text color */
+            text-decoration: none; /* Remove underlines from links */
+            font-size: 18px; /* Navbar link font size */
+            margin: 0 10px; /* Add space around the links */
+            transition: color 0.3s ease, cursor 0.3s ease; /* Add hover animation for text color and cursor */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        .navbar a:hover {
+            color: #0056b3; /* Change text color on hover */
+        }
+
+        /* Add a white line separator between navbar links */
+        .navbar a:not(:last-child)::after {
+            content: "|"; /* Add a vertical bar (separator) */
+            color: white; /* Set separator color to white */
+            margin: 0 10px; /* Add space around the separator */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+      <a onclick="location.href='/'">Home</a>
+      <a onclick="location.href='/predict'">Symptom based Disease Detection</a>
+      <a onclick="location.href='/skin'">Skin Disease Detection</a>
+    </div>
+    <div class="login">
+        <h1>Enter symptoms for disease detection</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="percent biking" placeholder="Enter your symptoms" required="required" autocomplete="off" /><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large submit">Check your disease</button>
+        </form>
+        <br>
+        <br>
+        <h4>{{ prediction_text }}</h4>
+    </div>
+</body>
+</html>
